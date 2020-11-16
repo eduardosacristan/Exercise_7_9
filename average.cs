@@ -5,7 +5,7 @@ public class Average
 {
     public static void Main()
     {
-        double total = 0, number_b, denominator = 0, average;
+        double total = 0, number, denominator = 0, average;
         string input;
         
         Console.Write("Insert a mark: ");
@@ -13,9 +13,9 @@ public class Average
         
         while(input != "end")
         {  
-            number_b = Convert.ToDouble(input);
+            number = Convert.ToDouble(input);
             denominator++;   
-            total += number_b;  
+            total += number;  
             Console.Write("Insert a mark: ");
             input = Console.ReadLine();
         }
