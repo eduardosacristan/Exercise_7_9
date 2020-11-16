@@ -1,27 +1,29 @@
+// This program calculates the average of all the numbers entered 
+
 using System;
 public class Average
 {
     public static void Main()
     {
-        double a = 0, b, c = 0, d;
-        string s;
+        double total = 0, number_b, denominator = 0, average;
+        string input;
         
         Console.Write("Insert a mark: ");
-        s = Console.ReadLine(); // we read the mark as string to check the word "end"
+        input = Console.ReadLine(); 
         
-        while(s! = "end")
-        {  // if the mark isn't an end then we pass it to double to work with it
-            b = Convert.ToDouble(s);
-            c++;   //counter of numbers
-            a += b;  // sum of all the notes
+        while(input != "end")
+        {  
+            number_b = Convert.ToDouble(input);
+            denominator++;   
+            total += number_b;  
             Console.Write("Insert a mark: ");
-            s = Console.ReadLine();
+            input = Console.ReadLine();
         }
         
-        if(c! = 0)
+        if(denominator != 0)
         {
-            d=a/c;  //calculate the average
-            Console.WriteLine("The average is {0}.",d);
+            average = total/denominator; 
+            Console.WriteLine("The average is {0}.",average);
         }
     }
 }
