@@ -1,4 +1,4 @@
-//This program conunts the number of digits of a given number.
+//This program counts the number of digits of a given number.
 
 using System;
 
@@ -6,24 +6,26 @@ class digits
 {
     static void Main()
     {
-        int a = 0, b = 0, c = 0, d = 0;
+        int one_digit = 0, two_digits = 0, three_digits = 0, more_digits = 0;
+        
         Console.Write("Insert a number: ");
-      
-        string e = Console.ReadLine();
-        while(e!="end")
+        string input = Console.ReadLine();
+        
+        while(input != "end")
         {
-            int input = Convert.ToInt32(e);
-            if(input != 0)
+            int number = Convert.ToInt32(input);
+            if(number != 0)
             {
-                if(input/10 == 0) a++; 
-                else if (input/100 == 0) b ++;  
-                else if (input/1000 == 0) c ++;  
-                else d++;  
+                if(number/10 == 0) one_digit++; 
+                else if (number/100 == 0) two_digits++;  
+                else if (number/1000 == 0) three_digits++;  
+                else more_digits++;  
             }
-        e = Console.ReadLine();
+        input = Console.ReadLine();
         }
 
-    Console.WriteLine("one: {0} two: {1} three: {2} more: {3}", a, b, c, d);
+    Console.WriteLine("one: {0} two: {1} three: {2} more: {3}",
+    one_digit, two_digits, three_digits, more_digits);
     }
 }
 
